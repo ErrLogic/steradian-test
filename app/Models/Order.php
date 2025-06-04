@@ -14,6 +14,7 @@ class Order extends Model
         'dropoff_date',
         'pickup_location',
         'dropoff_location',
+        'status'
     ];
 
     protected function casts(): array

@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('dropoff_date');
             $table->string('pickup_location', 50);
             $table->string('dropoff_location', 50);
+            $table->enum('status', ['ACCEPTED', 'REJECTED', 'COMPLETED'])->default('ACCEPTED');
             $table->timestamps();
         });
     }

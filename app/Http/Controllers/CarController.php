@@ -13,7 +13,7 @@ class CarController extends Controller
 
     public function getCars(): JsonResponse
     {
-        $cars = Car::all();
+        $cars = Car::simplePaginate(15);
 
         return $this->successResponse($cars, 'Cars retrieved successfully.', 200);
     }
